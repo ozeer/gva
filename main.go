@@ -29,14 +29,18 @@ func main() {
 	zap.ReplaceGlobals(global.GVA_LOG)
 	// gorm连接数据库
 	global.GVA_DB = initialize.Gorm()
+	// 初始化定时器
 	initialize.Timer()
+	// 初始化数据库
 	initialize.DBList()
-	if global.GVA_DB != nil {
-		// 初始化表
-		initialize.RegisterTables()
-		// 程序结束前关闭数据库链接
-		db, _ := global.GVA_DB.DB()
-		defer db.Close()
-	}
+	// if global.GVA_DB != nil {
+	// 	// 初始化表
+	// 	initialize.RegisterTables()
+	// 	// 程序结束前关闭数据库链接
+	// 	db, _ := global.GVA_DB.DB()
+	// 	defer db.Close()
+	// }
+
+	// 启动Server
 	core.RunWindowsServer()
 }

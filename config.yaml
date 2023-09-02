@@ -182,6 +182,7 @@ system:
     iplimit-count: 15000
     iplimit-time: 3600
     router-prefix: ""
+    app-name: "gva"
 tencent-cos:
     bucket: xxxxx-10005608
     region: ap-shanghai
@@ -202,10 +203,10 @@ timer:
           interval: 168h
 zap:
     level: info
-    prefix: '[github.com/ozeer/gva]'
-    format: console
+    prefix: 'gva'
+    format: json
     director: log
-    encode-level: LowercaseColorLevelEncoder
+    encode-level: LowercaseLevelEncoder
     stacktrace-key: stacktrace
     max-age: 0
     show-line: true

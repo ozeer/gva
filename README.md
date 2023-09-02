@@ -52,3 +52,9 @@
 | `--timer` | timer | 定时器接口封装 |
 | `--upload`      | oss                  | oss接口封装        |
 
+
+## 开发
+```
+go build -o build/server main.go
+./build/server
+```

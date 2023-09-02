@@ -2,10 +2,11 @@ package internal
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/ozeer/gva/global"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"time"
 )
 
 var Zap = new(_zap)
@@ -54,7 +55,7 @@ func (z *_zap) GetEncoderCore(l zapcore.Level, level zap.LevelEnablerFunc) zapco
 // CustomTimeEncoder 自定义日志输出时间格式
 // Author [SliverHorn](https://github.com/SliverHorn)
 func (z *_zap) CustomTimeEncoder(t time.Time, encoder zapcore.PrimitiveArrayEncoder) {
-	encoder.AppendString(global.GVA_CONFIG.Zap.Prefix + t.Format("2006/01/02 - 15:04:05.000"))
+	encoder.AppendString(t.Format("2006-01-02 15:04:05.000"))
 }
 
 // GetZapCores 根据配置文件的Level获取 []zapcore.Core
