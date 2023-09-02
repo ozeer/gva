@@ -3,3 +3,4 @@
 {"level":"error","time":"2023-09-02 14:19:49.768","caller":"/Users/zhouyang/learn/gva/core/server.go:38","message":"accept tcp [::]:8888: use of closed network connection","app_name":"gva"}
 {"level":"error","time":"2023-09-02 14:26:08.511","caller":"/Users/zhouyang/learn/gva/core/server.go:38","message":"net.Listen error: listen tcp :8888: bind: address already in use","app_name":"gva"}
 {"level":"error","time":"2023-09-02 14:29:25.966","caller":"/Users/zhouyang/learn/gva/core/server.go:38","message":"accept tcp [::]:8888: use of closed network connection","app_name":"gva"}
+{"level":"error","time":"2023-09-02 14:36:29.546","caller":"/Users/zhouyang/learn/gva/core/server.go:37","message":"accept tcp [::]:8888: use of closed network connection","app_name":"gva"}

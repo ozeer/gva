@@ -16,3 +16,9 @@
 {"level":"info","time":"2023-09-02 14:26:46.919","caller":"/Users/zhouyang/learn/gva/initialize/router.go:38","message":"register swagger handler","app_name":"gva"}
 {"level":"info","time":"2023-09-02 14:26:46.921","caller":"/Users/zhouyang/learn/gva/initialize/router.go:75","message":"router register success","app_name":"gva"}
 {"level":"info","time":"2023-09-02 14:26:46.921","caller":"/Users/zhouyang/learn/gva/core/server.go:37","message":"server run success on ","app_name":"gva","address":":8888"}
+{"level":"info","time":"2023-09-02 14:36:02.304","caller":"/Users/zhouyang/learn/gva/initialize/router.go:38","message":"register swagger handler","app_name":"gva"}
+{"level":"info","time":"2023-09-02 14:36:02.306","caller":"/Users/zhouyang/learn/gva/initialize/router.go:75","message":"router register success","app_name":"gva"}
+{"level":"info","time":"2023-09-02 14:36:02.306","caller":"/Users/zhouyang/learn/gva/core/server.go:36","message":"server run success on: :8888","app_name":"gva"}
+{"level":"info","time":"2023-09-02 14:36:51.044","caller":"/Users/zhouyang/learn/gva/initialize/router.go:38","message":"register swagger handler","app_name":"gva"}
+{"level":"info","time":"2023-09-02 14:36:51.062","caller":"/Users/zhouyang/learn/gva/initialize/router.go:75","message":"router register success","app_name":"gva"}
+{"level":"info","time":"2023-09-02 14:36:51.066","caller":"/Users/zhouyang/learn/gva/core/server.go:36","message":"server run success on :8888","app_name":"gva"}
