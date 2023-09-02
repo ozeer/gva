@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/ozeer/gva/global"
+	"github.com/ozeer/gva/model/designer"
 	"github.com/ozeer/gva/model/example"
 	"github.com/ozeer/gva/model/system"
 
@@ -55,6 +56,9 @@ func RegisterTables() {
 		example.ExaCustomer{},
 		example.ExaFileChunk{},
 		example.ExaFileUploadAndDownload{},
+
+		designer.DesignerCourse{},
+		designer.DesignerComment{},
 	)
 	if err != nil {
 		global.GVA_LOG.Error("register table failed", zap.Error(err))

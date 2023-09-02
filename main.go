@@ -33,13 +33,13 @@ func main() {
 	initialize.Timer()
 	// 初始化数据库
 	initialize.DBList()
-	// if global.GVA_DB != nil {
-	// 	// 初始化表
-	// 	initialize.RegisterTables()
-	// 	// 程序结束前关闭数据库链接
-	// 	db, _ := global.GVA_DB.DB()
-	// 	defer db.Close()
-	// }
+	if global.GVA_DB != nil {
+		// 初始化表
+		initialize.RegisterTables()
+		// 程序结束前关闭数据库链接
+		db, _ := global.GVA_DB.DB()
+		defer db.Close()
+	}
 
 	// 启动Server
 	core.RunWindowsServer()
