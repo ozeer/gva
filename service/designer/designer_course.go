@@ -7,7 +7,7 @@ import (
 
 type CourseService struct{}
 
-func (exa *CourseService) CreateDesignerCourse(e designer.DesignerCourse) (err error) {
+func (c *CourseService) CreateDesignerCourse(e designer.DesignerCourse) (err error) {
 	err = global.GVA_DB.Create(&e).Error
 	return err
 }

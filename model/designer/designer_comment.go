@@ -1,6 +1,9 @@
 package designer
 
-import "github.com/ozeer/gva/global"
+import (
+	"github.com/ozeer/gva/global"
+	"github.com/ozeer/gva/model/common/request"
+)
 
 type DesignerComment struct {
 	global.GVA_MODEL
@@ -17,4 +20,40 @@ type DesignerComment struct {
 
 func (DesignerComment) TableName() string {
 	return "designer_comment"
+}
+
+func AddComment(c DesignerComment) (err error) {
+	err = global.GVA_DB.Create(&c).Error
+	return err
+}
+
+func DeleteComment(c DesignerComment) (err error) {
+	err = global.GVA_DB.Delete(&c).Error
+	return err
+}
+
+func UpdateComment(c DesignerComment) (err error) {
+	err = global.GVA_DB.Save(c).Error
+	return err
+}
+
+func GetCommentById(id uint) (c DesignerComment, err error) {
+	err = global.GVA_DB.Where("id = ?", id).First(&c).Error
+	return
+}
+
+func ListComment(info request.PageInfo, condition map[string]string) (list interface{}, total int64, err error) {
+	limit := info.PageSize
+	offset := info.PageSize * (info.Page - 1)
+	db := global.GVA_DB.Model(&DesignerComment{})
+
+	var CommentList []DesignerComment
+	err = db.Where("uid in ?", condition["uid"]).Count(&total).Error
+	if err != nil {
+		return CommentList, total, err
+	} else {
+		err = db.Limit(limit).Offset(offset).Where("uid in ?", condition["uid"]).Find(&CommentList).Error
+	}
+
+	return CommentList, total, err
 }
