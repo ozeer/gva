@@ -60,9 +60,9 @@ func (h MysqlInitHandler) EnsureDB(ctx context.Context, conf *request.InitDB) (n
 
 	var db *gorm.DB
 	if db, err = gorm.Open(mysql.New(mysql.Config{
-		DSN:                       c.Dsn(), // DSN data source name
-		DefaultStringSize:         191,     // string 类型字段的默认长度
-		SkipInitializeWithVersion: true,    // 根据版本自动配置
+		DSN: c.Dsn(), // DSN data source name
+		// DefaultStringSize:         191,     // string 类型字段的默认长度
+		SkipInitializeWithVersion: true, // 根据版本自动配置
 	}), &gorm.Config{DisableForeignKeyConstraintWhenMigrating: true}); err != nil {
 		return ctx, err
 	}
