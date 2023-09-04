@@ -16,4 +16,7 @@ var (
 	OldAuthorityVerify     = Rules{"OldAuthorityId": {NotEmpty()}}
 	ChangePasswordVerify   = Rules{"Password": {NotEmpty()}, "NewPassword": {NotEmpty()}}
 	SetUserAuthorityVerify = Rules{"AuthorityId": {NotEmpty()}}
+
+	// 设计师评论
+	DesignerCommentVerify = Rules{"point": {NotEmpty()}, "content": {NotEmpty()}, "pics": {NotEmpty()}, "house_type": {NotEmpty()}, "decoration_mode": {NotEmpty()}, "house_area": {NotEmpty()}, "total_cost": {NotEmpty()}, "city": {NotEmpty()}, "contract": {NotEmpty()}}
 )

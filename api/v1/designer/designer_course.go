@@ -10,14 +10,6 @@ import (
 
 type CourseApi struct{}
 
-func (e *CourseApi) List(c *gin.Context) {
-
-}
-
-func (e *CourseApi) Detail(c *gin.Context) {
-
-}
-
 func (e *CourseApi) Create(c *gin.Context) {
 	var course designer.DesignerCourse
 	err := c.ShouldBindJSON(&course)
@@ -40,5 +32,13 @@ func (e *CourseApi) Delete(c *gin.Context) {
 }
 
 func (e *CourseApi) Edit(c *gin.Context) {
+
+}
+
+func (e *CourseApi) All(c *gin.Context) {
+
+}
+
+func (e *CourseApi) Detail(c *gin.Context) {
 
 }

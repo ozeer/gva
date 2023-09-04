@@ -11,12 +11,11 @@ func (t *CommentRouter) InitCommentRouter(Router *gin.RouterGroup) (R gin.IRoute
 	commentRouter := Router.Group("DesignerComment")
 	commentApi := v1.ApiGroupApp.DesignerApiGroup.CommentApi
 	{
-		commentRouter.POST("Add", commentApi.Add)
+		commentRouter.POST("Create", commentApi.Create)
 		commentRouter.POST("Delete", commentApi.Delete)
 		commentRouter.POST("Edit", commentApi.Edit)
 		commentRouter.GET("All", commentApi.All)
 		commentRouter.GET("Detail", commentApi.Detail)
-		commentRouter.GET("Get", commentApi.Get)
 	}
 	return commentRouter
 }
